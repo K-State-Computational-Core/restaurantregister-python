@@ -53,15 +53,15 @@ class CashDenomination(Enum):
     FIFTY_DOLLAR_BILL = (&#34;$50 Bill&#34;, 50.0)
     HUNDRED_DOLLAR_BILL = (&#34;$100 Bill&#34;, 100.0)
 
-    def __init__(self, description, amount) -&gt; None:
+    def __init__(self, description: str, amount: float) -&gt; None:
         &#34;&#34;&#34;Constructor.
 
         Args:
             description: the description of the denomination
             amount: the amount it represents
         &#34;&#34;&#34;
-        self.description = description
-        self.amount = amount
+        self.description: str = description
+        self.amount: float = amount
 
     def __str__(self) -&gt; str:
         &#34;&#34;&#34;String description of the denomination.
@@ -69,15 +69,7 @@ class CashDenomination(Enum):
         Returns:
             string description
         &#34;&#34;&#34;
-        return str(self.description)
-
-    def __repr__(self) -&gt; str:
-        &#34;&#34;&#34;String representation of the denomination.
-
-        Returns:
-            string description
-        &#34;&#34;&#34;
-        return str(self)</code></pre>
+        return str(self.description)</code></pre>
 </details>
 </section>
 <section>
@@ -91,7 +83,7 @@ class CashDenomination(Enum):
 <dl>
 <dt id="cc410.register.CashDenomination.CashDenomination"><code class="flex name class">
 <span>class <span class="ident">CashDenomination</span></span>
-<span>(</span><span>description, amount)</span>
+<span>(</span><span>description: str, amount: float)</span>
 </code></dt>
 <dd>
 <div class="desc"><p>Enumeration of cash denomination values.</p>
@@ -122,15 +114,15 @@ class CashDenomination(Enum):
     FIFTY_DOLLAR_BILL = (&#34;$50 Bill&#34;, 50.0)
     HUNDRED_DOLLAR_BILL = (&#34;$100 Bill&#34;, 100.0)
 
-    def __init__(self, description, amount) -&gt; None:
+    def __init__(self, description: str, amount: float) -&gt; None:
         &#34;&#34;&#34;Constructor.
 
         Args:
             description: the description of the denomination
             amount: the amount it represents
         &#34;&#34;&#34;
-        self.description = description
-        self.amount = amount
+        self.description: str = description
+        self.amount: float = amount
 
     def __str__(self) -&gt; str:
         &#34;&#34;&#34;String description of the denomination.
@@ -138,15 +130,7 @@ class CashDenomination(Enum):
         Returns:
             string description
         &#34;&#34;&#34;
-        return str(self.description)
-
-    def __repr__(self) -&gt; str:
-        &#34;&#34;&#34;String representation of the denomination.
-
-        Returns:
-            string description
-        &#34;&#34;&#34;
-        return str(self)</code></pre>
+        return str(self.description)</code></pre>
 </details>
 <h3>Ancestors</h3>
 <ul class="hlist">
