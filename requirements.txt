@@ -1,0 +1,12 @@
+coverage
+flake8
+flake8-docstrings
+flake8-html
+lxml
+mypy
+pdoc3
+pep8-naming
+pyhamcrest
+pytest
+pytest-html
+tox
