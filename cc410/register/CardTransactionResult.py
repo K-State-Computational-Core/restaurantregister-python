@@ -22,11 +22,3 @@ class CardTransactionResult(str, Enum):
             string description
         """
         return str(self.value)
-
-    def __repr__(self) -> str:
-        """String representation of the result.
-
-        Returns:
-            string description
-        """
-        return str(self)

@@ -22,15 +22,15 @@ class CashDenomination(Enum):
     FIFTY_DOLLAR_BILL = ("$50 Bill", 50.0)
     HUNDRED_DOLLAR_BILL = ("$100 Bill", 100.0)
 
-    def __init__(self, description, amount) -> None:
+    def __init__(self, description: str, amount: float) -> None:
         """Constructor.
 
         Args:
             description: the description of the denomination
             amount: the amount it represents
         """
-        self.description = description
-        self.amount = amount
+        self.description: str = description
+        self.amount: float = amount
 
     def __str__(self) -> str:
         """String description of the denomination.
@@ -39,11 +39,3 @@ class CashDenomination(Enum):
             string description
         """
         return str(self.description)
-
-    def __repr__(self) -> str:
-        """String representation of the denomination.
-
-        Returns:
-            string description
-        """
-        return str(self)
