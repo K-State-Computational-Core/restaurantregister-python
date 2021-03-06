@@ -70,9 +70,12 @@ class CashDrawer:
 
         Raises:
             RuntimeError: if the drawer is not open
+            ValueError: if the count is negative
         """
         if not self.__open:
             raise RuntimeError("Cash drawer must be open to modify.")
+        if count < 0:
+            raise ValueError("Count must not be negative.")
         self.__contents[denom] += count
 
     def remove_count(self, denom: CashDenomination, count: int) -> None:
@@ -84,9 +87,13 @@ class CashDrawer:
 
         Raises:
             RuntimeError: if the drawer is not open
+            ValueError: if the count is negative
+            ValueError: if the count is greater than the number present
         """
         if not self.__open:
             raise RuntimeError("Cash drawer must be open to modify.")
+        if count < 0:
+            raise ValueError("Count must not be negative.")
         if count > self.__contents[denom]:
             raise ValueError("Cannot remove more than are present.")
         self.__contents[denom] -= count

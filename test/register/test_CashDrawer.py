@@ -58,6 +58,22 @@ class TestCashDrawer():
             drawer.open(-0.01)
         assert_that(str(e.value), is_("Amount must not be negative."))
 
+    def test_add_count_negative(self) -> None:
+        """Add Count must not be negative."""
+        drawer: CashDrawer = CashDrawer()
+        drawer.open(0.0)
+        with pytest.raises(ValueError) as e:
+            drawer.add_count(CashDenomination.PENNY, -1)
+        assert_that(str(e.value), is_("Count must not be negative."))
+
+    def test_remove_count_negative(self) -> None:
+        """Remove Count must not be negative."""
+        drawer: CashDrawer = CashDrawer()
+        drawer.open(0.0)
+        with pytest.raises(ValueError) as e:
+            drawer.remove_count(CashDenomination.PENNY, -1)
+        assert_that(str(e.value), is_("Count must not be negative."))
+
     def test_cash_amount_changed_balance(self) -> None:
         """Cash amount changed must balance."""
         drawer: CashDrawer = CashDrawer()
