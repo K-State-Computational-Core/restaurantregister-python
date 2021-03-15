@@ -108,6 +108,7 @@ class ReceiptPrinter:
         self.__writer.write(&#34;**** RECEIPT END: {} ****\n&#34;.
                             format(datetime.now().strftime(&#34;%Y%m%d-%H:%M:%S&#34;)))
         self.__writer.write(&#34;========================================\n&#34;)
+        self.__writer.flush()
 
     def close(self) -&gt; None:
         &#34;&#34;&#34;Closes the file.&#34;&#34;&#34;
@@ -184,6 +185,7 @@ class ReceiptPrinter:
         self.__writer.write(&#34;**** RECEIPT END: {} ****\n&#34;.
                             format(datetime.now().strftime(&#34;%Y%m%d-%H:%M:%S&#34;)))
         self.__writer.write(&#34;========================================\n&#34;)
+        self.__writer.flush()
 
     def close(self) -&gt; None:
         &#34;&#34;&#34;Closes the file.&#34;&#34;&#34;
@@ -231,7 +233,8 @@ class ReceiptPrinter:
     self.__writer.write(&#34;========================================\n&#34;)
     self.__writer.write(&#34;**** RECEIPT END: {} ****\n&#34;.
                         format(datetime.now().strftime(&#34;%Y%m%d-%H:%M:%S&#34;)))
-    self.__writer.write(&#34;========================================\n&#34;)</code></pre>
+    self.__writer.write(&#34;========================================\n&#34;)
+    self.__writer.flush()</code></pre>
 </details>
 </dd>
 <dt id="cc410.register.ReceiptPrinter.ReceiptPrinter.print_line"><code class="name flex">

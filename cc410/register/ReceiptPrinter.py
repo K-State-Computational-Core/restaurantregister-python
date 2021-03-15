@@ -70,6 +70,7 @@ class ReceiptPrinter:
         self.__writer.write("**** RECEIPT END: {} ****\n".
                             format(datetime.now().strftime("%Y%m%d-%H:%M:%S")))
         self.__writer.write("========================================\n")
+        self.__writer.flush()
 
     def close(self) -> None:
         """Closes the file."""
